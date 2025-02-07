@@ -1,0 +1,56 @@
+body {
+    background-color: #f8e8a6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #d9534f;
+    margin-bottom: 40px;
+}
+
+.job {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.job img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.job h2 {
+    margin: 0;
+    color: #05546c;
+}
+
+.job p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .job {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .job img {
+        margin-bottom: 10px;
+    }
+}

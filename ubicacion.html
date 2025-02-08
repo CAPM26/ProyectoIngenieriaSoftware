@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación | Empresa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /* Header */
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .header a:hover {
+            opacity: 0.7;
+        }
+        .container {
+            max-width: 900px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+        h2 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html">🏠 Página Principal</a>
+        <span>📍 Ubicación</span>
+    </header>
+
+    <div class="container">
+        <h2>Nuestra Ubicación</h2>
+        <div id="map"></div>
+
+        <div class="info">
+            <p><strong>Dirección:</strong> Calle 15 de septiembre y 2a. Avenida Zona 1 Jutiapa. Ref: en frente de pollo campero</p>
+            <p><strong>Teléfono:</strong> +502 7844-0001</p>
+            <p><strong>Horario:</strong> Lunes - Viernes: 8:00 AM - 6:00 PM y Sabados: 8:00 AM - 2:00 PM</p>
+            <a href="https://maps.app.goo.gl/qNCKXyveByDBJPAo8" target="_blank" class="btn">Cómo llegar</a>
+            <br>
+            <br>
+        </div>
+        <div class="diagramaEmpresa">
+            <h2>Diagrama de la empresa</h2>
+            <img src="\images\DiagramaEmpresa.png" alt="Diagrama de la empresa">
+        </div>
+    </div>
+
+    <script>
+        function initMap() {
+            var location = { lat: 14.288960, lng: -89.894829 };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Ubicación Exacta"
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7C-vh0oxKwNFP0pApd3IDHGMDS_NzIk&callback=initMap" async defer></script>
+
+</body>
+</html>

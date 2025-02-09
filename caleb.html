@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software de Gestión Documental</title>
+    <style>
+        /* Estilos Globales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;  /* Fondo negro */
+            color: white;  /* Texto blanco */
+        }
+
+        /* Estilo para el encabezado */
+        header {
+            background-color: #ffffff;  /* Fondo blanco */
+            color: #000000;  /* Texto negro en el encabezado */
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 8px solid #d9534f;  /* Línea naranja en la parte inferior */
+        }
+
+        /* Espacio para el logo en la esquina superior izquierda */
+        .logo img {
+            height: 100px;
+            transition: transform 0.3s ease; 
+        }
+        .logo img:hover {
+            transform: scale(1.2); 
+            }
+  
+
+        /* Título principal */
+        h1 {
+            font-size: 2em;
+            margin-left: 20px;
+        }
+
+        /* Contenedor de características */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        /* Estilo de cada característica */
+        .feature {
+            background-color: #222222;  /* Fondo gris oscuro */
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word;  /* Evita que el texto se desborde */
+        }
+
+        /* Estilo para los títulos de las características */
+        .feature h2 {
+            color: #FFA500;  /* Títulos en color naranja */
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Estilo cuando se pasa el cursor sobre el título */
+        .feature h2:hover {
+            color: #FFD700;  /* Cambia el color a dorado cuando el cursor pasa */
+            transform: scale(1.05); /* Efecto de aumento suave */
+        }
+
+        /* Contenedor de información oculta */
+        .info {
+            display: none;
+            padding-top: 10px;
+            color: #ffffff;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, max-height 0.5s ease;  /* Transición suave */
+        }
+
+        /* Mostrar la información con transición cuando se hace clic */
+        .feature.active .info {
+            display: block;
+            opacity: 1;
+            max-height: 1000px; /* Ajuste máximo para la animación */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado con logo y título -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img  src="images/logo43.png" alt="Logo de la empresa"style="width: 150px;">
+             </a>    
+        </div>
+       
+           
+        <h1>Software de Gestión Documental</h1>
+    </header>
+
+    <!-- Contenedor de las características del software -->
+    <div class="container">
+        <section>
+            <div class="feature">
+                <h2>📂 Almacenamiento Seguro</h2>
+                <div class="info">
+                    <p>Guarda y organiza documentos en la nube con acceso rápido y seguro, permitiendo una gestión eficiente de la información.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <h2>🔍 Búsqueda Avanzada</h2>
+                <div class="info">
+                    <p>Encuentra documentos fácilmente utilizando filtros, etiquetas y capacidades de reconocimiento de texto (OCR) en imágenes y PDFs.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <h2>🔐 Control de Acceso</h2>
+                <div class="info">
+                    <p>Define permisos de usuario según el rol, garantizando la seguridad y protección de la información sensible.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <h2>📝 Firma Digital</h2>
+                <div class="info">
+                    <p>Permite la firma electrónica de documentos de manera legal, lo que agiliza los procesos de aprobación.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <h2>☁️ Integración con la Nube</h2>
+                <div class="info">
+                    <p>Conéctate con plataformas en la nube como Google Drive, OneDrive, Dropbox, y más, para compartir y almacenar documentos sin esfuerzo.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Agregar un event listener a cada título
+        const features = document.querySelectorAll('.feature');
+
+        features.forEach(feature => {
+            const title = feature.querySelector('h2');
+            title.addEventListener('click', () => {
+                // Alternar la clase 'active' para mostrar/ocultar la información
+                feature.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

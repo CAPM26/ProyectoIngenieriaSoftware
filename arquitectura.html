@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Software</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef1f7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #222;
+            margin-top: 20px;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+        .description {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            font-size: 1.3rem;
+            color: #333;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+        }
+        .arquitecturasoftware {
+            margin-top: 30px;
+        }
+        .arquitecturasoftware img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .box {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .box:hover {
+            transform: scale(1.06);
+        }
+        .frontend { background-color: #4CAF50; color: white; }
+        .api-gateway { background-color: #FF9800; color: white; }
+        .backend { background-color: #2196F3; color: white; }
+        .servicios { background-color: #9C27B0; color: white; }
+        .database { background-color: #3F51B5; color: white; }
+        .seguridad { background-color: #F44336; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Arquitectura de Software</h1>
+
+    <div class="description">
+        <p><strong>¿Qué es la arquitectura de software?</strong></p>
+        <p>La arquitectura de software es el diseño estructural de un sistema informático, definiendo cómo los diferentes componentes interactúan entre sí. 
+        Su correcta implementación garantiza escalabilidad, seguridad y eficiencia.</p>
+        <p><strong>¿Cómo aplicamos esta arquitectura en nuestra empresa?</strong></p>
+        <p>En nuestra plataforma de venta de software y servicios IT, usamos un modelo moderno que incluye una interfaz amigable, una API Gateway para gestionar la comunicación, servicios backend optimizados, bases de datos confiables y medidas de seguridad avanzadas.</p>
+    </div>
+
+    <div class="arquitecturasoftware">
+        <img src="images/arquitecturadesoftware.png" alt="ArquitecturaSoftware">
+    </div>
+    <div class="container">
+        <div class="box frontend">Frontend UI: Interfaz de usuario, HTML, CSS</div>
+        <div class="box api-gateway">API Gateway: Conexión, Seguridad</div>
+        <div class="box backend">Servicios Backend: Manejo de Clientes, Pagos, Gestión de proyectos, Recursos Humanos</div>
+        <div class="box servicios">Servicios Internos: Notificaciones, Reportes, Pagos</div>
+        <div class="box database">Base de Datos: Manejo de datos</div>
+        <div class="box seguridad">Infraestructura y Seguridad:Se implementan servidores y asegura la plataforma con firewall. </div>
+    </div>
+</body>
+</html>

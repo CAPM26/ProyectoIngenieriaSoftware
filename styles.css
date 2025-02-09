@@ -6,6 +6,16 @@ body {
     text-align: center;
 }
 
+.logo img {
+  
+    transition: transform 0.3s ease; 
+  }
+  
+  .logo img:hover {
+    transform: scale(1.5); 
+  }
+  
+
 h1 {
     color: #d9534f;
     margin-bottom: 40px;
